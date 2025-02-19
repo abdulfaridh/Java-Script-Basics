@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rock-Paper-Scissors</title>
+
+</head>
+<body>
+<h1> Rock Paper Scissors </h1>
+<button onclick = "const Random = Math.random();
+
+let computerMove = '';
+
+if(Random >= 0 && Random < 1/3)
+{
+computerMove = 'Rock';
+}
+else if( Random >= 1/3 && Random < 2/3)
+{
+computerMove = 'Paper';
+}
+else if(Random >= 2/3 && Random < 1)
+{
+computerMove = 'Scissors';
+}
+
+console.log(computerMove);
+
+let result = ''; 
+
+if(computerMove === 'Rock')
+{
+	result = 'Tie.';
+}
+else if(computerMove === 'Paper')
+{
+	result = 'You Lose.';
+}
+else if (computerMove === 'Scissors')
+{
+	result = 'You win.';
+}
+
+alert(`You picked rock . computer picked ${computerMove}. ${result}`);
+
+">
+Rock
+</button>
+
+<button onclick = "const Random = Math.random();
+
+let computerMove = '';
+
+if(Random >= 0 && Random < 1/3)
+{
+computerMove = 'Rock';
+}
+else if( Random >= 1/3 && Random < 2/3)
+{
+computerMove = 'Paper';
+}
+else if(Random >= 2/3 && Random < 1)
+{
+computerMove = 'Scissors';
+}
+
+console.log(computerMove);
+
+let result = ''; 
+
+if(computerMove === 'Paper')
+{
+	result = 'Tie.';
+}
+else if(computerMove === 'Scissors')
+{
+	result = 'You Lose.';
+}
+else if (computerMove === 'Rock')
+{
+	result = 'You win.';
+}
+
+alert(`You picked paper . computer picked ${computerMove}. ${result}`);
+">
+Paper
+</button>
+
+<button onclick = "const Random = Math.random();
+
+let computerMove = '';
+
+if(Random >= 0 && Random < 1/3)
+{
+computerMove = 'Rock';
+}
+else if( Random >= 1/3 && Random < 2/3)
+{
+computerMove = 'Paper';
+}
+else if(Random >= 2/3 && Random < 1)
+{
+computerMove = 'Scissors';
+}
+
+console.log(computerMove);
+
+let result = ''; 
+
+if(computerMove === 'Scissors')
+{
+	result = 'Tie.';
+}
+else if(computerMove === 'Rock')
+{
+	result = 'You Lose.';
+}
+else if (computerMove === 'Paper')
+{
+	result = 'You win.';
+}
+
+alert(`You picked scissors . computer picked ${computerMove}. ${result}`);
+">Scissors</button>
+
+
+<script> // html element that allows the JS
+
+
+	
+
+</script>
+</body>
+
+</html>
+
+
+

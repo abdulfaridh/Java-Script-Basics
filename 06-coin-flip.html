@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Coin-flip</title>
+
+</head>
+<body>
+<h1> Coin-flip </h1>
+<p> Guess the coin </p>
+<button onclick = " 
+let guess = 'heads';
+let random = Math.random();
+let computerFlip = '';
+if(random < 0.5)
+{
+	computerFlip = 'heads';
+}
+else
+{
+	computerFlip = 'tails';
+}
+
+let result = '';
+
+if(guess === computerFlip)
+{
+	result = 'You win!';
+}
+else
+{
+	result = 'You Loose!';
+}
+
+console.log(result);
+
+"> Heads </button>
+
+<button onclick = " 
+let guess = 'tails';
+let random = Math.random();
+let computerFlip = '';
+
+computerFlip = random < 0.5 ? 'heads':'tails';
+
+let result = '';
+
+result = guess === computerFlip ? 'You Win!' : 'You Loose!';
+
+console.log(result);
+
+"> Tails </button>
+
+
+<script> // html element that allows the JS
+
+
+	
+
+</script>
+</body>
+
+</html>
+
+
+

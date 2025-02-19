@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<title>Exercise-variables</title>
+<head></head>
+<body>
+
+<button onclick = "cartQuantity = ++cartQuantity; 
+console.log(`The cartQuantity is : ${cartQuantity}`);">
+Add to cart 
+</button>
+
+<button onclick = "cartQuantity += 4;
+ console.log(`The cartQuantity is : ${cartQuantity}`);">
++4
+</button>
+
+<button onclick = "cartQuantity += 5;
+ console.log(`The cartQuantity is : ${cartQuantity}`);">
++5
+</button>
+
+<button onclick = "cartQuantity = --cartQuantity;
+ console.log(`The cartQuantity is : ${cartQuantity}`);">
+-1
+</button>
+
+<button onclick = "cartQuantity -= 2;
+ console.log(`The cartQuantity is : ${cartQuantity}`);">
+-2
+</button>
+
+<button onclick = "cartQuantity -= 3;
+ console.log(`The cartQuantity is : ${cartQuantity}`);">
+
+-3
+</button>
+<p> look at the console for output </p>
+
+
+<script>
+let cartQuantity = 0;
+let name = 'abdul';
+console.log(`my name is : ${name}`);
+let cost = 5+(2*3)+9;
+console.log(`Cost of food: $${cost}`);
+let Tax = (2000*0.1)/100;
+console.log(`tax: $${Tax}`);
+let totalCost = cost + Tax;
+console.log(`totalCost : $${totalCost}`);
+
+
+</script>
+</body>
+</html>
