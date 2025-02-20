@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart-Quantity</title>
+
+</head>
+<body>
+<h1>Cart Quantity</h1>
+<button onclick = "console.log(`cart quantity: ${CartQuantity}`);">
+	Show Quantity
+</button>
+
+<button onclick = " updateCartQuantity(1);">Add to Cart</button>
+
+<button onclick = "updateCartQuantity(2);">+2</button>
+
+<button onclick = "updateCartQuantity(3)">+3</button>
+
+<button onclick = "reduceCartQuantity(-1)">-1</button>
+
+<button onclick = "reduceCartQuantity(-2)">-2</button>
+
+<button onclick = "reduceCartQuantity(-3)">-3</button>
+<p> look at the console for output </p>
+
+
+<button onclick = "reduceCartQuantity(0)">Reset Cart</button>
+
+<script> // html element that allows the JS
+let CartQuantity = 10;
+
+function updateCartQuantity(userPick)
+{
+
+if(userPick === 1)
+{
+
+if(CartQuantity >= 10)
+{
+alert('The cart is full');
+}
+else
+{
+CartQuantity = CartQuantity + 1;
+console.log(`cart quantity: ${CartQuantity}`);
+}
+		
+}
+else if(userPick === 2)
+{
+
+if(CartQuantity >= 10)
+{
+alert('The cart is full');
+}
+else
+{
+CartQuantity = CartQuantity + 2;
+console.log(`cart quantity: ${CartQuantity}`);
+}
+
+}
+
+else if(userPick === 3)
+{
+
+if(CartQuantity >= 10)
+{
+alert('The cart is full');
+}
+else
+{
+CartQuantity = CartQuantity + 3;
+console.log(`cart quantity: ${CartQuantity}`);
+}
+
+}
+
+		
+}
+
+function reduceCartQuantity(userPick)
+{
+
+if(userPick === 0)
+{
+
+CartQuantity = 0; console.log('Cart was reset');
+console.log(`cart quantity: ${CartQuantity}`);
+
+}
+else if(userPick === -1)
+{
+
+if(CartQuantity <= 0)
+{
+alert('Not enough items in the cart');
+}
+else
+{
+CartQuantity = --CartQuantity;
+ console.log(`The cartQuantity is : ${CartQuantity}`);
+}
+
+}
+
+else if(userPick === -2)
+{
+
+if(CartQuantity <= 0)
+{
+alert('Not enough items in the cart');
+}
+else
+{
+CartQuantity -= 2;
+ console.log(`The cartQuantity is : ${CartQuantity}`);
+}
+
+}
+
+else if(userPick === -3)
+{
+
+if(CartQuantity <= 0)
+{
+alert('Not enough items in the cart');
+}
+else
+{
+CartQuantity -= 3;
+ console.log(`The cartQuantity is : ${CartQuantity}`);
+}
+
+}
+
+}
+
+
+		
+</script>
+</body>
+
+</html>
+
+
