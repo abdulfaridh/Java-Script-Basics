@@ -33,10 +33,50 @@ calctax(2000);
 function add(num1,num2 = 1)
 {
 	console.log(num1+num2);
-}
+}  
+
 
 add(1,2);
-add(3); 
+add(3);
+
+
+function greet(name)
+{
+	if(!name)
+	{
+		console.log('Hi there!');
+	}
+	else
+		console.log(name);
+}
+
+greet('Hello!');
+greet('Simon');
+greet();
+
+let Fahrenheit = 0;
+let celsius = 0;
+
+function convertToFahrenheit(celsius)
+{
+	Fahrenheit = (celsius * 9/5) + 32;
+	console.log(Fahrenheit);
+	
+}
+
+console.log(Fahrenheit);
+
+function convertToCelsius(fahrenheit)
+{
+	celsius = (fahrenheit - 32) * 5/9;
+	console.log(celsius);
+	
+}
+
+
+
+convertToFahrenheit(25);
+convertToCelsius(86);
 
 </script>
 </body>
