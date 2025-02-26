@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Objects</title>
+
+</head>
+<body>
+<script> // html element that allows the JS
+
+const product = {
+
+name : 'socks',
+price : 1090 , 
+'delivery-time' : '1 day',
+rating : {
+
+stars : 4.5,
+count : 87
+},
+
+fun: function function1()
+{
+console.log('function inside object');
+}
+
+
+};
+
+console.log(localStorage.getItem('message')); //getting value from localStorage.
+
+console.log(product);
+console.log(product.name); // getting the value associated with that property
+console.log(product.price);
+console.log(product['delivery-time']);
+console.log(product.rating);
+console.log(product.rating.stars);
+product.fun();
+
+const jsonString = JSON.stringify(product); // converting the JS object into JSON by using JSON object
+console.log(jsonString);
+
+console.log(JSON.parse(jsonString)); // converting JSON string back to JS object by using JSON object 
+
+localStorage.setItem('message','hello'); // settinig value in localStorage 
+
+
+product.name = 'cotton socks'; // changing the value associated with that property
+console.log(product.name);
+
+product.date = '07-05-2003';
+console.log(product);
+
+delete product.price;
+console.log(product);
+
+
+const product2 = {
+name : 'shirt' 
+};
+
+console.log(product2);
+</script>
+</body>
+
+</html>
+
