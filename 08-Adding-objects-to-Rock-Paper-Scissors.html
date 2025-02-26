@@ -23,12 +23,30 @@
 
 <button onclick = "playGame('Scissors');">Scissors</button>
 
-<button onclick = "score.wins = 0 ; score.losses = 0; score.tie = 0;">Reset Score</button>
+<button onclick = "
+ score.wins = 0 ;
+ score.losses = 0;
+ score.tie = 0;
+ localStorage.removeItem('score');
+">Reset Score</button>
 
 <script> // html element that allows the JS
 
 // lets create a object to store score.
-const score = JSON.parse(localStorage.getItem('score'));
+
+let score = JSON.parse(localStorage.getItem('score')); //we are converting the JSON string back into a object
+
+if(score === null)
+{
+//giving a default score since cant read null
+score = {
+wins : 0,
+losses : 0,
+tie : 0
+};
+
+}
+
 
 
 function playGame(playerMove)
