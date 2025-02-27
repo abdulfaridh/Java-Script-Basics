@@ -7,6 +7,7 @@
 <body>
 <script> // html element that allows the JS
 
+/*
 const product = {
 
 name : 'socks',
@@ -59,6 +60,47 @@ name : 'shirt'
 };
 
 console.log(product2);
+*/
+
+console.log('hello'.length);
+console.log('hello'.toUpperCase());
+
+const obj1 = {
+message : 'hello',
+news : 'welcome to test'
+};
+
+
+
+
+const {message,news} = obj1;//deStructinig shortcut took the message out of the property and saved it inside the variable
+
+console.log(message,news); // we can also log 2 elements together but it will appear in a single line in O/P
+
+const obj2 = {
+message : message, 
+method : function func1()
+{
+console.log('method');
+}
+};
+
+console.log(message);
+obj2.method();
+
+//shortcut for above is shortHand property and shortHand method
+
+const obj3 = {
+message,
+method()
+{
+console.log('method');
+}
+};
+
+console.log(message);
+obj3.method();
+
 </script>
 </body>
 
