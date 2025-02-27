@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>08-Improved-Coin-flip</title>
+
+</head>
+<body>
+<h1> Coin-flip </h1>
+<p> Guess the coin </p>
+<button onclick = "playGame('heads')"> Heads </button>
+
+<button onclick = "playGame('tails')"> Tails </button>
+
+<button onclick = "
+ score.wins = 0 ;
+ score.losses = 0;
+ alert('reset sucessfull');
+ localStorage.removeItem('score');
+">Reset Score</button>
+
+
+<script> // html element that allows the JS
+
+
+
+
+let score = JSON.parse(localStorage.getItem('score'));
+
+if(score === null)
+{
+
+score = {
+wins : 0,
+losses : 0,
+};
+
+}
+
+function playGame(guess)
+{
+
+computerGuess();
+
+let result = '';
+
+if( guess === 'heads')
+{
+result = guess === computerFlip ? 'You Win!' : 'You Loose!';
+}
+
+else if( guess === 'tails')
+{
+result = guess === computerFlip ? 'You Win!' : 'You Loose!';
+}
+
+if( result === 'You Win!')
+{
+
+score.wins += 1;
+
+}
+
+else if( result === 'You Loose!')
+{
+
+score.losses += 1;
+
+}
+
+
+alert(`You guessed : ${guess} , computerFlip : ${computerFlip} 
+wins : ${score.wins} , looses : ${score.losses}`);
+
+localStorage.setItem('score', JSON.stringify(score));
+
+}
+
+let computerFlip = '';
+
+function computerGuess()
+{
+let random = Math.random();
+
+computerFlip = random < 0.5 ? 'heads':'tails';
+
+}	
+
+</script>
+</body>
+
+</html>
+
+
