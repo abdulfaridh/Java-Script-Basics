@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM-Projects</title>
+
+</head>
+<body>
+<p> YouTube subscribe button </p>
+<button class = "js-subscribe-button" onclick = "subscribe()">Subscribe</button>
+
+<p>Rock Paper Scissors</p>
+
+
+<p>Amazon Shipping calculator </p>
+<p> Orders under $40 = +$10 shipping.</p>
+<p> Orders over $40 = FREE shipping.</p>
+<input class = "js-input" placeholder = "cost of order" onkeydown = "handlecostkeydown(event);">
+<button onclick = "calculateTotal();">Calculate</button>
+<p class ="js-result"></p>
+
+<script>
+
+function handlecostkeydown(event)
+{
+if(event.key === 'Enter')
+{
+calculateTotal();
+}
+}
+
+function calculateTotal()
+{
+	const inputElement = document.querySelector('.js-input');
+	let calc = Number(inputElement.value); //.value ,will get the value that entered and save it in a variable
+	                                       // also using Number() to convert the inputElement from string to num.
+	if(calc < 40)
+	{
+		calc = calc + 10;
+	}
+	
+	document.querySelector('.js-result').innerHTML = `$${calc}`;
+	
+}
+
+function subscribe()
+{
+const buttonElement = document.querySelector('.js-subscribe-button');
+
+if(buttonElement.innerText === 'Subscribe')// using innerText cuz innerHTML also counts the spaces inside the TXT
+{
+	buttonElement.innerHTML = 'Subscribed';
+}
+else if(buttonElement.innerText === 'Subscribed')
+{
+	buttonElement.innerHTML = 'Subscribe';
+}
+}
+
+
+</script>
+</body>
+
+</html>
