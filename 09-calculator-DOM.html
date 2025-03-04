@@ -2,54 +2,42 @@
 <html>
 <head>
     <title>Simple Calculator</title>
+
+<link rel = "stylesheet" href = "styles/09-calculator-DOM.css">
+
 </head>
 <body>
 
-    <h1>Simple Calculator</h1>
-    <p class="js-display">0</p>
+    <p class="js-display display">0</p>
 
     <button onclick="updateDisplay('1')">1</button>
     <button onclick="updateDisplay('2')">2</button>
     <button onclick="updateDisplay('3')">3</button>
-    <button onclick="updateDisplay('+')">+</button>
+
+    <button class = "moves" onclick="updateDisplay('+')">+</button><br>
+
+    <button onclick="updateDisplay('4')">4</button>
+    <button onclick="updateDisplay('5')">5</button>
+    <button onclick="updateDisplay('6')">6</button>
+
+    <button class = "moves" onclick="updateDisplay('-')">-</button><br>
+
+    <button onclick="updateDisplay('7')">7</button>
+    <button onclick="updateDisplay('8')">8</button>
+    <button onclick="updateDisplay('9')">9</button>
+
+    <button class = "moves" onclick="updateDisplay('*')">*</button><br>
+
+    <button onclick="updateDisplay('0')">0</button>
+    <button onclick="updateDisplay('.')">.</button>
     <button onclick="calculateResult()">=</button>
-    <button onclick="clearDisplay()">C</button>
 
-    <script>
-        let displayValue = localStorage.getItem('calculation') || '';
+    <button class = "moves" onclick="updateDisplay('/')">/</button><br>
 
-        document.querySelector('.js-display').innerHTML = displayValue || '0';
+    <button class = "clear" onclick="clearDisplay()">Clear</button>
 
-        function updateDisplay(value) {
-            displayValue += value;
-            document.querySelector('.js-display').innerHTML = displayValue;
-            localStorage.setItem('calculation', displayValue);
-        }
+    <script src = "scripts/09-calculator-DOM.js">
 
-        function calculateResult() {
-            if (displayValue !== '') {
-                displayValue = eval(displayValue); // Evaluates the calculation
-                document.querySelector('.js-display').innerHTML = displayValue;
-                localStorage.setItem('calculation', displayValue);
-            }
-        }
-
-        function clearDisplay() {
-            displayValue = '';
-            document.querySelector('.js-display').innerHTML = '0';
-            localStorage.removeItem('calculation');
-        }
-
-        document.addEventListener('keydown', (event) => {
-            const key = event.key;
-            if (/\d|\+/.test(key)) {
-                updateDisplay(key);
-            } else if (key === 'Enter') {
-                calculateResult();
-            } else if (key === 'Escape') {
-                clearDisplay();
-            }
-        });
     </script>
 
 </body>
