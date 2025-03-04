@@ -1,0 +1,48 @@
+body
+	{
+		font-family : Arial;
+		padding-bottom : 110px;
+	}
+
+	.subscribe-button
+	{
+		border : none;
+		background-color : black;
+		color : white;
+		padding-top : 10px;
+		padding-bottom : 10px;
+		padding-left : 15px;
+		padding-right : 15px;
+		font-weight : bold;
+		border-radius : 50px;
+		cursor : pointer;
+		margin-bottom : 35px;
+	}
+
+	.is-subscribed
+	{
+		background-color : rgb(240,240,240);
+		color : black;
+	}
+
+	.cost-input
+	{
+		font-family : Arial;
+		font-size : 15px;
+		padding-top : 10px;
+		padding-bottom : 10px;
+		padding-left : 10px;
+		padding-right : 10px;
+		
+	}
+	.calculate
+	{
+		background-color : green;
+		color : white;
+		border : none;
+		font-family : Arial;
+		font-size : 15px;
+		padding : 12px 15px; 
+		cursor: pointer;
+
+	}
