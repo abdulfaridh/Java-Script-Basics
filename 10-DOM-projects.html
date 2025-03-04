@@ -2,60 +2,13 @@
 <html>
 <head>
 <title>DOM-Projects</title>
-<style>
-	body
-	{
-		font-family : Arial;
-		padding-bottom : 110px;
-	}
-
-	.subscribe-button
-	{
-		border : none;
-		background-color : black;
-		color : white;
-		padding-top : 10px;
-		padding-bottom : 10px;
-		padding-left : 15px;
-		padding-right : 15px;
-		font-weight : bold;
-		border-radius : 50px;
-		cursor : pointer;
-		margin-bottom : 35px;
-	}
-
-	.is-subscribed
-	{
-		background-color : rgb(240,240,240);
-		color : black;
-	}
-
-	.cost-input
-	{
-		font-family : Arial;
-		font-size : 15px;
-		padding-top : 10px;
-		padding-bottom : 10px;
-		padding-left : 10px;
-		padding-right : 10px;
-		
-	}
-	.calculate
-	{
-		background-color : green;
-		color : white;
-		border : none;
-		font-family : Arial;
-		font-size : 15px;
-		padding : 12px 15px; 
-		cursor: pointer;
-
-	}
-</style>
+<link rel = "stylesheet" href = "styles/10-DOM-projects.css">
 </head>
 <body>
 <p> YouTube Subscribe Button </p>
 <button class = "js-subscribe-button subscribe-button" onclick = "subscribe()">Subscribe</button>
+<p> Rock-Paper-Scissors </p>
+<a href = "10-rock-paper-scissors.html">click here</a>
 <p>Amazon Shipping Calculator </p>
 <p> Orders under $40 = +$10 shipping.</p>
 <p> Orders over $40 = FREE shipping.</p>
@@ -63,46 +16,7 @@
 <button class = "calculate" onclick = "calculateTotal();">Calculate</button>
 <p class ="js-result"></p>
 
-<script>
-
-function handlecostkeydown(event)
-{
-if(event.key === 'Enter')
-{
-calculateTotal();
-}
-}
-
-function calculateTotal()
-{
-	const inputElement = document.querySelector('.js-input');
-	let calc = Number(inputElement.value); //.value ,will get the value that entered and save it in a variable
-	                                       // also using Number() to convert the inputElement from string to num.
-	if(calc < 40)
-	{
-		calc = calc + 10;
-	}
-	
-	document.querySelector('.js-result').innerHTML = `$${calc}`;
-	
-}
-
-function subscribe()
-{
-const buttonElement = document.querySelector('.js-subscribe-button');
-
-if(buttonElement.innerText === 'Subscribe')// using innerText cuz innerHTML also counts the spaces inside the TXT
-{
-	buttonElement.innerHTML = 'Subscribed';
-	buttonElement.classList.add('is-subscribed');
-}
-else if(buttonElement.innerText === 'Subscribed')
-{
-	buttonElement.innerHTML = 'Subscribe';
-	buttonElement.classList.remove('is-subscribed');
-}
-}
-
+<script src = "scripts/10-DOM-projects.js">
 
 </script>
 </body>
