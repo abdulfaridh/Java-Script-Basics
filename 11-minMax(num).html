@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MIN MAX</title>
+<style>
+</style>
+</head>
+<body>
+ 
+<script>
+const arrayNum = [];
+let min = 0;
+let max = 0;
+
+function minMax(nums)
+{
+arrayNum.push(nums);
+
+for(let i = 0; i< arrayNum.length ;i++)
+{
+if(arrayNum[i] < min )
+{
+min = arrayNum[i];
+}
+else if(arrayNum[i] > max)
+{
+max = arrayNum[i];
+}
+}
+
+}
+
+minMax(1);
+minMax(-3);
+minMax(5);
+
+console.log(`{min: ${min}, max: ${max}}`);
+</script>
+</body>
+</html>
